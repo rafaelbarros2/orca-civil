@@ -3,7 +3,6 @@ package application;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.orcacivil.application.UserCase;
-import org.orcacivil.domain.Orcamento;
 
 public class UserCaseTest {
 

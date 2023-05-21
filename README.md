@@ -1,2 +1,2 @@
 # orca-civil
-Api facilitar orçamentos de obras
+Api que visa facilitar orçamentos de obras

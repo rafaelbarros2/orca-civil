@@ -1,6 +1,6 @@
 package org.orcacivil.application;
 
-import org.orcacivil.domain.Orcamento;
+import org.orcacivil.domain.orcamento.Orcamento;
 
 public class UserCase {
 
