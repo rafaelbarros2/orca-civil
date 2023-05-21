@@ -1,0 +1,5 @@
+rootProject.name = 'orca-civil'
+include 'domain'
+include 'application'
+include 'infrastructure'
+
