@@ -1,21 +1,21 @@
 package org.orcacivil.domain.orcamento;
 
 import jdk.jfr.Category;
+import org.orcacivil.domain.AggregateRoot;
 
 import java.time.Instant;
 import java.util.UUID;
 
-public class Orcamento {
+public class Orcamento extends AggregateRoot<OrcamentoID> {
 
-    private String id;
     private String name;
     private boolean active;
     private Instant createdAt;
     private Instant updatedAt;
     private Instant deletedAt;
 
-    private Orcamento(String id, String name, boolean active, Instant createdAt, Instant updatedAt, Instant deletedAt) {
-        this.id = id;
+    public Orcamento(OrcamentoID id, String name, boolean active, Instant createdAt, Instant updatedAt, Instant deletedAt) {
+        super(id);
         this.name = name;
         this.active = active;
         this.createdAt = createdAt;
@@ -24,16 +24,12 @@ public class Orcamento {
     }
 
     public static Orcamento newOrcamento(final String name, final boolean active){
-        final String id = UUID.randomUUID().toString();
+        final var id = OrcamentoID.unique();
         return new Orcamento(id, name,active,Instant.now(), Instant.now(), null);
     }
 
-    public String getId() {
+    public OrcamentoID getId() {
         return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
     }
 
     public String getName() {

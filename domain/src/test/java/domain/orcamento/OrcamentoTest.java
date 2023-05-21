@@ -10,15 +10,15 @@ public class OrcamentoTest {
 
 
     @Test
-    public void givenAValidParams_whenCallNewOrcamento_thenIntantiateAOrcamento(){
+    public void givenAValidParams_whenCallNewOrcamento_thenIntantiateAOrcamento() {
         final var expectedName = "Construção 1";
-        final var expectedIsActive= true;
-       final var actualOrcamento =  Orcamento.newOrcamento(expectedName, expectedIsActive);
+        final var expectedIsActive = true;
+        final var actualOrcamento = Orcamento.newOrcamento(expectedName, expectedIsActive);
 
-       Assertions.assertNotNull(actualOrcamento);
-       Assertions.assertNotNull(actualOrcamento.getId());
-       Assertions.assertEquals(expectedName, actualOrcamento.getName());
-       Assertions.assertEquals(expectedIsActive, actualOrcamento.isActive());
+        Assertions.assertNotNull(actualOrcamento);
+        Assertions.assertNotNull(actualOrcamento.getId());
+        Assertions.assertEquals(expectedName, actualOrcamento.getName());
+        Assertions.assertEquals(expectedIsActive, actualOrcamento.isActive());
         Assertions.assertNotNull(actualOrcamento.getUpdatedAt());
         Assertions.assertNotNull(actualOrcamento.getCreatedAt());
         Assertions.assertNull(actualOrcamento.getDeletedAt());

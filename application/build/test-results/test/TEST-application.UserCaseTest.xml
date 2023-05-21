@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="application.UserCaseTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-05-20T23:52:49" hostname="DESKTOP-108PFB8" time="0.015">
+<testsuite name="application.UserCaseTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-05-21T21:24:24" hostname="DESKTOP-108PFB8" time="0.016">
   <properties/>
-  <testcase name="testCreateUserCade()" classname="application.UserCaseTest" time="0.015"/>
+  <testcase name="testCreateUserCade()" classname="application.UserCaseTest" time="0.016"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
