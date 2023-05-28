@@ -1,10 +1,9 @@
 package org.orcacivil.domain.orcamento;
 
-import jdk.jfr.Category;
 import org.orcacivil.domain.AggregateRoot;
+import org.orcacivil.domain.validation.ValidationHandler;
 
 import java.time.Instant;
-import java.util.UUID;
 
 public class Orcamento extends AggregateRoot<OrcamentoID> {
 
@@ -28,6 +27,10 @@ public class Orcamento extends AggregateRoot<OrcamentoID> {
         return new Orcamento(id, name,active,Instant.now(), Instant.now(), null);
     }
 
+    @Override
+    public  void validate(final ValidationHandler validationHandler){
+    new OrcamentoValidator(validationHandler,this).validate();
+    }
     public OrcamentoID getId() {
         return id;
     }
